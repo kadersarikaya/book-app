@@ -1,0 +1,152 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "description": "Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way.",
+      "price": 25.99,
+      "currency": "USD",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41jEbK-jG+L._SX396_BO1,204,203,200_.jpg",
+      "categrory": "programming"
+    },
+    {
+      "id": 3,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "description": "A special 25th anniversary edition of the extraordinary international bestseller, including a new Foreword by Paulo Coelho.",
+      "price": 10.99,
+      "currency": "USD",
+      "image": "https://i.dr.com.tr/cache/600x600-0/originals/0000000191213-1.jpg",
+      "categrory": "fiction"
+    },
+    {
+      "id": 4,
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen R. Covey",
+      "description": "One of the most inspiring and impactful books ever written, The 7 Habits of Highly Effective People has captivated readers for nearly three decades. It has transformed the lives of presidents and CEOs, educators and parents—millions of people of all ages and occupations. Now, this 30th anniversary edition of the timeless classic commemorates the wisdom of the 7 habits with modern additions from Sean Covey.",
+      "price": 20.99,
+      "currency": "USD",
+      "image": "https://cdn.kobo.com/book-images/8cacc164-4797-47d4-a845-9fe06fbe44fd/1200/1200/False/the-7-habits-of-highly-effective-people-infographics-edition.jpg",
+      "categrory": "self-help"
+    },
+    {
+      "id": 5,
+      "title": "The 5 Love Languages",
+      "author": "Gary Chapman",
+      "description": "Falling in love is easy. Staying in love—that’s the challenge. How can you keep your relationship fresh and growing amid the demands, conflicts, and just plain boredom of everyday life?",
+      "price": 12.99,
+      "currency": "USD",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1660521120i/61971332.jpg",
+      "categrory": "self-help"
+    },
+    {
+      "id": 6,
+      "title": "The 5 AM Club",
+      "author": "Robin Sharma",
+      "description": "Legendary leadership and elite performance expert Robin Sharma introduced The 5am Club concept over twenty years ago, based on a revolutionary morning routine that has helped his clients maximize their productivity, activate their best health and bulletproof their serenity in this age of overwhelming complexity.",
+      "price": 18.99,
+      "currency": "USD",
+      "image": "https://img.kitapyurdu.com/v1/getImage/fn:11473370/wh:true/wi:800",
+      "categrory": "self-help"
+    },
+    {
+      "id": 7,
+      "author": "Cal Newport",
+      "title": "Deep Work",
+      "description": "Deep work is the ability to focus without distraction on a cognitively demanding task. It's a skill that allows you to quickly master complicated information and produce better results in less time. Deep work will make you better at what you do and provide the sense of true fulfillment that comes from craftsmanship. In short, deep work is like a super power in our increasingly competitive twenty-first century economy. And yet, most people have lost the ability to go deep-spending their days instead in a frantic blur of e-mail and social media, not even realizing there's a better way.",
+      "price": 15.99,
+      "currency": "USD",
+      "image": "https://cdn.kobo.com/book-images/685e0632-a7f9-4661-bbea-116a03a9aea9/1200/1200/False/deep-work-2.jpg",
+      "categrory": "self-help"
+    },
+    {
+      "id": 8,
+      "author": "Mark Manson",
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "description": "In this generation-defining self-help guide, a superstar blogger cuts through the crap to show us how to stop trying to be positive all the time so that we can truly become better, happier people.",
+      "price": 12.99,
+      "currency": "USD",
+      "image": "https://m.media-amazon.com/images/I/71t4GuxLCuL._AC_UF1000,1000_QL80_.jpg",
+      "categrory": "self-help"
+    },
+    {
+      "id": 9,
+      "title": "Circe",
+      "author": "Madeline Miller",
+      "description": "In the house of Helios, god of the sun and mightiest of the Titans, a daughter is born. But Circe is a strange child—not powerful, like her father, nor viciously alluring like her mother. Turning to the world of mortals for companionship, she discovers that she does possess power—the power of witchcraft, which can transform rivals into monsters and menace the gods themselves.",
+      "price": 15.99,
+      "currency": "USD",
+      "image": "https://m.media-amazon.com/images/I/81POqvuiqTL._AC_UF1000,1000_QL80_.jpg",
+      "categrory": "fiction"
+    },
+    {
+      "title": "Fareler ve İnsanlar",
+      "author": "John Steinbeck",
+      "description": "ahkjfdksk",
+      "price": "50",
+      "image": "",
+      "currency": "TRY",
+      "id": 11
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 2,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 3,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 4,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 5,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 6,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 7,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 8,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    },
+    {
+      "id": 9,
+      "bookId": 1,
+      "comment": "This is a great book",
+      "author": "John Doe"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
