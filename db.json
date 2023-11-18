@@ -146,6 +146,48 @@
       "author": "John Doe"
     }
   ],
+  "users": [
+    {
+      "id": 1,
+      "username": "kaders",
+      "email": "sarkayakader@gmail.com",
+      "password": "Enazsekiz.8",
+      "address": "",
+      "phone": ""
+    },
+    {
+      "id": 2,
+      "username": "ece",
+      "email": "ece@gmail.com",
+      "password": "12345",
+      "address": "",
+      "phone": "05445291524"
+    },
+    {
+      "username": "kaders",
+      "email": "kadersarikaya0123@gmail.com",
+      "password": "Enazsekiz.8",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 3
+    },
+    {
+      "username": "kaders",
+      "email": "kadersarikaya0123@gmail.com",
+      "password": "Enazsekiz.8",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 4
+    },
+    {
+      "username": "tilki",
+      "email": "kadersarikaya0123@gmail.com",
+      "password": "nkjsdnkf",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 5
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
