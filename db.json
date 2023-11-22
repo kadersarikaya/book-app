@@ -63,7 +63,7 @@
       "id": 1,
       "username": "kaders",
       "email": "sarkayakader@gmail.com",
-      "password": "Enazsekiz.8",
+      "password": "trdgtfd",
       "address": "",
       "phone": ""
     },
@@ -72,81 +72,29 @@
       "username": "ece",
       "email": "ece@gmail.com",
       "password": "12345",
-      "address": "",
-      "phone": "05445291524"
+      "address": "", 
     },
     {
       "username": "kaders",
       "email": "kadersarikaya0123@gmail.com",
-      "password": "Enazsekiz.8",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
+      "password": "ewrwr",
+      "phone": "", 
       "id": 3
     },
     {
       "username": "kaders",
       "email": "kadersarikaya0123@gmail.com",
-      "password": "Enazsekiz.8",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
+      "password": "erwrer",
+      "phone": "",
+      "address": "ere",
       "id": 4
     },
     {
       "username": "tilki",
       "email": "kadersarikaya0123@gmail.com",
-      "password": "nkjsdnkf",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
+      "password": "nkjsdnkf", 
       "id": 5
     },
-    {
-      "username": "kadershhh",
-      "email": "kadersarikaya0123@gmail.com",
-      "password": "xffgfhtftyhfytfy",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
-      "id": 6
-    },
-    {
-      "username": "harika",
-      "email": "hsduhsau@gmail.com",
-      "password": "Enazsekiz.8",
-      "phone": "",
-      "address": "",
-      "id": 7
-    },
-    {
-      "username": "kaderseeeeee",
-      "email": "kadersarikaya0123@gmail.com",
-      "password": "eeeeeeeeeeeeeee",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
-      "id": 8
-    },
-    {
-      "username": "kadersssssssss",
-      "email": "kadersarikaya0123@gmail.com",
-      "password": "wwwwwwwwwwwwwwwwww",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
-      "id": 9
-    },
-    {
-      "username": "kaderssssssss",
-      "email": "kadersarikaya0123@gmail.coms",
-      "password": "sssssssssssssssss",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
-      "id": 10
-    },
-    {
-      "username": "tilkis",
-      "email": "kadersarikaya0123@gmail.com",
-      "password": "Enazsekiz.8",
-      "phone": "05445291524",
-      "address": "5 camlibel 2942 street adana",
-      "id": 11
-    }
   ],
   "profile": {
     "name": "typicode"
