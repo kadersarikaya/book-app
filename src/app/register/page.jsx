@@ -55,7 +55,7 @@ const Register = () => {
         }
     })
     return (
-        <Container>
+        <Container sx={{marginTop: "5"}} >
             <Stack spacing={2}>
                 <Typography variant="h4" component="h1">
                    Register

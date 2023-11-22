@@ -8,16 +8,50 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Edit } from "@mui/icons-material";
+import { Edit, Delete } from "@mui/icons-material";
 import Link from "next/link";
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Modal from '@mui/material/Modal';
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+};
 
 const BookCard = ({book}) => {
     const {id, title, author, image, price, currency, category, description} = book;
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    const router = useRouter();
+    const [isDeleted, setIsDeleted] = React.useState(false);
+
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:4000/books/${id}`);
+            alert("Book deleted successfully");
+            setOpen(false);
+            setIsDeleted(true);
+        } catch (error) {
+            console.log(error);
+        }
+        // await axios.delete(`http://localhost:4000/books/${id}`);
+        // Silme işlemi başarılı olduktan sonra sayfayı yeniden yükle.
+    };
   return (
-      <Card sx={{ maxWidth: 345 }}>
+    <div className="">
+     { !isDeleted &&
+         <Card sx={{ maxWidth: 345 }}>
           <CardHeader
               avatar={
                   <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -43,19 +77,43 @@ const BookCard = ({book}) => {
                   {description.slice(0, 100) + "..."}
               </Typography>
           </CardContent>
-          <CardActions disableSpacing>
+          <CardActions sx={{display:"flex", justifyContent:"space-between" }} disableSpacing>
+              <Link href={`/books/${book.id}`}>
+                    <Button variant="" color="primary">
+                        View
+                    </Button>
+              </Link>
             <Link href={`/edit-books/${id}`}>
               <IconButton aria-label="edit">
                   <Edit />
               </IconButton>
+            </Link>
+              <IconButton onClick={handleOpen}>
+                <Delete />
+              </IconButton>
+              <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+              >
+                  <Box sx={style}>
+                      <Typography id="modal-modal-title" variant="h6" component="h2">
+                          Are you sure you want to delete this book?
+                      </Typography>
+                        <Button onClick={handleClose}>Cancel</Button>
+                        <Button onClick={() => handleDelete(id)}>Delete</Button>
+                  </Box>
+              </Modal>
                 <Typography
                 variant="h6"
                 >
-                    {currency}{ price}
-                </Typography>
-            </Link>
+                {price} {currency } 
+                </Typography>            
           </CardActions> 
-      </Card>
+         </Card>
+      }
+    </div>
   )
 };
 

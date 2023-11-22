@@ -12,13 +12,6 @@ const BookDetail = () => {
   const [book, setBooks] = useState(null);
   const [comments, setComments] = useState([]); 
 
-  const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:4000/books/${id}`);
-    // Silme işlemi başarılı olduktan sonra sayfayı yeniden yükle.
-    alert('Book deleted succesfully!');
-    router.push('/');
-  }
-
   useEffect(() => {
     if (id) {
       axios
@@ -46,7 +39,7 @@ const BookDetail = () => {
         display: "flex", 
         justifyContent: "center",
         flexDirection: "column",
-        padding: "20px"
+        padding: "20px",
       }} >
       <Box sx={{
         display: "flex",
@@ -72,17 +65,6 @@ const BookDetail = () => {
             {book.currency} {book.price}
           </Typography>
           <Typography variant="body">{book.description}</Typography>
-          <Box sx={{
-            paddingTop: "10px",
-          }} >
-            <Button
-              variant="contained"
-              color="error"
-              onClick={() => handleDelete(book.id)}
-            >
-              Delete
-            </Button>
-          </Box>
         </Box>
       </Box>
       <Box sx={{padding: 5}} >

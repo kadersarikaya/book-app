@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import styles from './page.module.css'
+import './page.module.css'
 import Link from 'next/link'
 import BookCard from '@/components/BookCard'
 import Box from '@mui/material/Box';
@@ -14,9 +14,9 @@ import {styled, alpha} from '@mui/material/styles';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  backgroundColor: alpha(theme.palette.common.black, 0.15),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.black, 0.25),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
@@ -34,7 +34,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   pointerEvents: 'none',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'start',
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
@@ -84,7 +84,7 @@ export default function Home() {
       margin: '0 auto', 
     }}>
       <Box sx={{ display: 'flex', justifyContent:
-       'center', alignItems: 'center', marginBottom: '20px' }}>
+       'start', alignItems: 'center', marginY: '20px' }}>
         <Search>
           <SearchIconWrapper>
             <SearchIcon />
@@ -100,9 +100,7 @@ export default function Home() {
       {books &&
         books.map((book)=> (
         <Grid item xs={12} sm={6} md={4} lg={3}>
-          <Link href={`/books/${book.id}`}>
             <BookCard book={book} />
-          </Link>
         </Grid>
       ))}
       </Grid>

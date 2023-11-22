@@ -61,16 +61,6 @@
       "categrory": "self-help"
     },
     {
-      "id": 8,
-      "author": "Mark Manson",
-      "title": "The Subtle Art of Not Giving a F*ck",
-      "description": "In this generation-defining self-help guide, a superstar blogger cuts through the crap to show us how to stop trying to be positive all the time so that we can truly become better, happier people.",
-      "price": 12.99,
-      "currency": "USD",
-      "image": "https://m.media-amazon.com/images/I/71t4GuxLCuL._AC_UF1000,1000_QL80_.jpg",
-      "categrory": "self-help"
-    },
-    {
       "id": 9,
       "title": "Circe",
       "author": "Madeline Miller",
@@ -79,73 +69,9 @@
       "currency": "USD",
       "image": "https://m.media-amazon.com/images/I/81POqvuiqTL._AC_UF1000,1000_QL80_.jpg",
       "categrory": "fiction"
-    },
-    {
-      "title": "Fareler ve İnsanlar",
-      "author": "John Steinbeck",
-      "description": "ahkjfdksk",
-      "price": "50",
-      "image": "",
-      "currency": "TRY",
-      "id": 11
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 2,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 3,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 4,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 5,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 6,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 7,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 8,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    },
-    {
-      "id": 9,
-      "bookId": 1,
-      "comment": "This is a great book",
-      "author": "John Doe"
-    }
-  ],
+  "comments": [],
   "users": [
     {
       "id": 1,
