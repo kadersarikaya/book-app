@@ -51,6 +51,7 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          
           <Typography
             variant="h6"
             noWrap
@@ -101,14 +102,18 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.path} onClick={handleCloseNavMenu}>
-                  <Link href={page.path}>
-                  <Typography textAlign="center">{page.name}</Typography>
-                  </Link>
+                  
+                  <Typography textAlign="center">
+                    <Link href={page.path}>
+                    {page.name}
+                    </Link>
+                    </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          
           <Typography
             variant="h5"
             noWrap
@@ -131,6 +136,7 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+              
               <Button
                 key={page.path}
                 onClick={handleCloseNavMenu}

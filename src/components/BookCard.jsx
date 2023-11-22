@@ -28,20 +28,22 @@ const style = {
     p: 4,
 };
 
-const BookCard = ({book}) => {
+const BookCard = ({book, setBooks, books}) => {
     const {id, title, author, image, price, currency, category, description} = book;
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const router = useRouter();
-    const [isDeleted, setIsDeleted] = React.useState(false);
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:4000/books/${id}`);
-            alert("Book deleted successfully");
-            setOpen(false);
-            setIsDeleted(true);
+           const res = await axios.delete(`http://localhost:4000/books/${id}`);
+           if(res) {
+            const filtered = books.filter((book)=> book.id !== id );
+            setBooks(filtered);
+           } 
+           setOpen(false);
+            setBooks(...res.data);
         } catch (error) {
             console.log(error);
         }
@@ -50,69 +52,67 @@ const BookCard = ({book}) => {
     };
   return (
     <div className="">
-     { !isDeleted &&
-         <Card sx={{ maxWidth: 345 }}>
-          <CardHeader
-              avatar={
-                  <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        {author[0]}
-                  </Avatar>
-              }
-              title={title}
-              subheader={author}
-          />
-          <CardMedia
-              style={{height: "300px", 
-                        width: "300px",
-                        objectFit: "contain",
-                        margin: "0 auto"
-            }}
-              component="img"
-              height="194"
-              image={image ? image : "https://picsum.photos/200/300"}
-              alt="book image"
-          />
-          <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                  {description.slice(0, 100) + "..."}
-              </Typography>
-          </CardContent>
-          <CardActions sx={{display:"flex", justifyContent:"space-between" }} disableSpacing>
-              <Link href={`/books/${book.id}`}>
-                    <Button variant="" color="primary">
-                        View
-                    </Button>
-              </Link>
-            <Link href={`/edit-books/${id}`}>
-              <IconButton aria-label="edit">
-                  <Edit />
-              </IconButton>
+        <Card sx={{ maxWidth: 345 }}>
+        <CardHeader
+            avatar={
+                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                    {author[0]}
+                </Avatar>
+            }
+            title={title}
+            subheader={author}
+        />
+        <CardMedia
+            style={{height: "300px", 
+                    width: "300px",
+                    objectFit: "contain",
+                    margin: "0 auto"
+        }}
+            component="img"
+            height="194"
+            image={image ? image : "https://picsum.photos/200/300"}
+            alt="book image"
+        />
+        <CardContent>
+            <Typography variant="body2" color="text.secondary">
+                {description.slice(0, 100) + "..."}
+            </Typography>
+        </CardContent>
+        <CardActions sx={{display:"flex", justifyContent:"space-between" }} disableSpacing>
+            <Link href={`/books/${book.id}`}>
+                <Button variant="" color="primary">
+                    View
+                </Button>
             </Link>
-              <IconButton onClick={handleOpen}>
-                <Delete />
-              </IconButton>
-              <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-              >
-                  <Box sx={style}>
-                      <Typography id="modal-modal-title" variant="h6" component="h2">
-                          Are you sure you want to delete this book?
-                      </Typography>
-                        <Button onClick={handleClose}>Cancel</Button>
-                        <Button onClick={() => handleDelete(id)}>Delete</Button>
-                  </Box>
-              </Modal>
-                <Typography
-                variant="h6"
-                >
-                {price} {currency } 
-                </Typography>            
-          </CardActions> 
-         </Card>
-      }
+        <Link href={`/edit-books/${id}`}>
+            <IconButton aria-label="edit">
+                <Edit />
+            </IconButton>
+        </Link>
+            <IconButton onClick={handleOpen}>
+            <Delete />
+            </IconButton>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                        Are you sure you want to delete this book?
+                    </Typography>
+                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={() => handleDelete(id)}>Delete</Button>
+                </Box>
+            </Modal>
+            <Typography
+            variant="h6"
+            >
+            {price} {currency } 
+            </Typography>            
+        </CardActions> 
+        </Card>
     </div>
   )
 };
