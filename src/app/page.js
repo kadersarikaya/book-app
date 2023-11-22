@@ -80,7 +80,6 @@ export default function Home() {
 
   return (
     <Box sx={{ flexGrow: 1, 
-     padding: '20px', 
       margin: '0 auto', 
     }}>
       <Box sx={{ display: 'flex', justifyContent:

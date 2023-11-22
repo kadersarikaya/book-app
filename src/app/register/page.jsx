@@ -1,12 +1,8 @@
 "use client"
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {
     Button,
     Container,
-    FormControl,
-    InputLabel,
-    MenuItem,
-    Select,
     Stack,
     TextField,
     Typography,
@@ -33,7 +29,28 @@ const RegisterSchema = Yup.object().shape({
 
 const Register = () => {
     const router = useRouter();
-    
+    const [users,setUsers] = useState([]);
+    const [error, setError] = useState("")
+
+    useEffect(() => {
+        const getUsers = async () => {
+            try {
+                const res = await axios.get("http://localhost:4000/users/");
+                if(!res) {
+                    throw new Error('Failed to fetch users');
+                }
+                setUsers(res.data)
+            }
+            catch (error) {
+                alert(`Failed to register: ${error.message}`);
+                console.error('An error occurred:', error);
+            }
+
+        }
+        getUsers();
+    }, [])
+
+
     const formik = useFormik({
         initialValues: {
             username: '',
@@ -45,26 +62,36 @@ const Register = () => {
         validationSchema: RegisterSchema,
         onSubmit: async (values) => {
             try {
-                await axios.post('http://localhost:4000/users', values)
-                alert('User registered successfully!');
-                router.push("/login")
+                const usernameExists = users.some(user => user.username === values.username);
+                if (usernameExists) {
+                    setError("This username has already been taken!");
+                } else {
+                    setError("");
+                    await axios.post('http://localhost:4000/users', values);
+                    alert('User registered successfully!');
+                    router.push("/login");
+                }
             } catch (error) {
                 alert('Failed to register');
                 console.error('An error occurred:', error);
             }
         }
+
     })
+
     return (
-        <Container sx={{"marginTop": 5}} >
+        <Container  >
             <Stack spacing={2}>
                 <Typography variant="h4" component="h1">
                    Register
                 </Typography>
-                <form onSubmit={formik.handleSubmit} action="">
+                <form 
+                 onSubmit={formik.handleSubmit} action="">
                     <TextField 
                         fullWidth
                         id="username"
                         name="username"
+                        margin="normal"
                         label="username"
                         value={formik.values.username}
                         onChange={formik.handleChange}
@@ -76,6 +103,7 @@ const Register = () => {
                     <TextField
                         fullWidth
                         id="email"
+                        margin="normal"
                         name="email"
                         label="email"
                         value={formik.values.email}
@@ -91,6 +119,8 @@ const Register = () => {
                         id="password"
                         name="password"
                         label="password"
+                        type="password" 
+                        margin="normal"
                         value={formik.values.password}
                         onChange={formik.handleChange}
                         error={formik.touched.password &&
@@ -104,6 +134,7 @@ const Register = () => {
                         id="address"
                         name="address"
                         label="address"
+                        margin="normal"
                         value={formik.values.address}
                         onChange={formik.handleChange}
                         error={formik.touched.address &&
@@ -116,6 +147,7 @@ const Register = () => {
                         id="phone"
                         name="phone"
                         label="tel"
+                        margin="normal"
                         value={formik.values.phone}
                         onChange={formik.handleChange}
                         error={formik.touched.phone &&
@@ -128,6 +160,7 @@ const Register = () => {
                         Register
                     </Button>
                 </form>
+                {error ? error : ""}
             </Stack>
         </Container>
     )

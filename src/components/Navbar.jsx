@@ -23,6 +23,10 @@ const pages = [
   {
     path: "/register",
     name: "Register" 
+  },
+  {
+    path: "/add-book",
+    name: "Add Book"
   }
 ]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -47,16 +51,15 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar sx={{marginBottom: 5}} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -67,9 +70,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <Link href="/">
             BOOKSHELF
-            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -102,23 +103,22 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.path} onClick={handleCloseNavMenu}>
-                  
-                  <Typography textAlign="center">
-                    <Link href={page.path}>
+                  <Typography 
+                    href={page.path}
+                  textAlign="center"
+                  >
                     {page.name}
-                    </Link>
                     </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -130,25 +130,21 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <Link href="/">
             BOOKSHELF
-            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              
+              <Link href={page.path}>
               <Button
                 key={page.path}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link href={page.path}>
                 {page.name}
-                </Link>
               </Button>
+              </Link>
             ))}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

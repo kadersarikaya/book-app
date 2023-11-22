@@ -28,6 +28,25 @@ const RegisterSchema = Yup.object().shape({
 
 const Login = () => {
   const router = useRouter();
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState("")
+
+  useEffect(() => {
+    const getUsers = async () => {
+      try {
+        const res = await axios.get("http://localhost:4000/users/");
+        if (!res) {
+          throw new Error('Failed to fetch users');
+        }
+        setUsers(res.data)
+      }
+      catch (error) {
+        alert(`Failed to register: ${error.message}`);
+        console.error('An error occurred:', error);
+      }
+    }
+    getUsers();
+  }, [])
 
   const formik = useFormik({
     initialValues: {
@@ -38,9 +57,16 @@ const Login = () => {
     validationSchema: RegisterSchema,
     onSubmit: async (values) => {
       try {
-        await axios.get('http://localhost:4000/users', values)
-        alert('User logined successfully!');
-        router.push("/")
+        const usernameExists = users.some((user)=>user.username===values.username)
+        if(usernameExists) {
+          await axios.get('http://localhost:4000/users', values)
+          alert('User logined successfully!');
+          router.push("/")
+        }
+        else {
+          setError("Username does not exist");
+        }
+        
       } catch (error) {
         alert('Failed to register');
         console.error('An error occurred:', error);
@@ -59,6 +85,7 @@ const Login = () => {
             fullWidth
             id="username"
             name="username"
+            margin="normal"
             label="username"
             value={formik.values.username}
             onChange={formik.handleChange}
@@ -72,6 +99,7 @@ const Login = () => {
             id="email"
             name="email"
             label="email"
+            margin="normal"
             value={formik.values.email}
             onChange={formik.handleChange}
             error={formik.touched.email &&
@@ -85,6 +113,8 @@ const Login = () => {
             id="password"
             name="password"
             label="password"
+            margin="normal"
+            type="password"
             value={formik.values.password}
             onChange={formik.handleChange}
             error={formik.touched.password &&
@@ -97,6 +127,7 @@ const Login = () => {
             Login
           </Button>
         </form>
+        {error}
       </Stack>
     </Container>
   )

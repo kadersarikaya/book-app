@@ -38,6 +38,7 @@ const BookCard = ({book, setBooks, books}) => {
     const handleDelete = async (id) => {
         try {
            const res = await axios.delete(`http://localhost:4000/books/${id}`);
+           console.log(res);
            if(res) {
             const filtered = books.filter((book)=> book.id !== id );
             setBooks(filtered);

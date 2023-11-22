@@ -19,6 +19,36 @@
       "currency": "USD",
       "image": "https://m.media-amazon.com/images/I/81POqvuiqTL._AC_UF1000,1000_QL80_.jpg",
       "categrory": "fiction"
+    },
+    {
+      "id": 2,
+      "title": "Mesnevi",
+      "author": "Mevlana",
+      "description": "Mesnevî, Mesnevî-i Şerif ya da Mesnevî-yi Manevî, Mevlânâ Celâleddîn-i Rûmî'nin altı ciltlik Farsça eseri. Mesnevî, doğu klasik edebiyatında, uyakça müstakil beyitlerinin, ikişer mısrası kafiyeli olan bir nazım türüdür ve muhtelif şairlerin neşrettikleri birer Mesnevi vardır.",
+      "price": 22.99,
+      "currency": "TR",
+      "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcROGUVa8dfFkNVmbH2C8tIEJTtShq5z6LEtlaX8vKsX3LQPn0eS",
+      "categrory": "fiction"
+    },
+    {
+      "id": 2,
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "description": "İki Şehrin Hikâyesi, Charles Dickens'ın 1859 yılında gazetelerde tefrika edilmek üzere yazdığı, konusu Fransız Devrimi esnasında ve öncesinde Paris ve Londra'da geçen romandır. 200 milyonun üzerindeki satışı ile tüm zamanların en meşhur edebiyat eserleri arasındadır.",
+      "price": 12.99,
+      "currency": "TR",
+      "image": "https://img.kitapyurdu.com/v1/getImage/fn:4908573/wh:true/wi:220",
+      "categrory": "fiction"
+    },
+    {
+      "id": 2,
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "description": "İki Şehrin Hikâyesi, Charles Dickens'ın 1859 yılında gazetelerde tefrika edilmek üzere yazdığı, konusu Fransız Devrimi esnasında ve öncesinde Paris ve Londra'da geçen romandır. 200 milyonun üzerindeki satışı ile tüm zamanların en meşhur edebiyat eserleri arasındadır.",
+      "price": 12.99,
+      "currency": "TR",
+      "image": "",
+      "categrory": "fiction"
     }
   ],
   "comments": [
@@ -68,6 +98,54 @@
       "phone": "05445291524",
       "address": "5 camlibel 2942 street adana",
       "id": 5
+    },
+    {
+      "username": "kadershhh",
+      "email": "kadersarikaya0123@gmail.com",
+      "password": "xffgfhtftyhfytfy",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 6
+    },
+    {
+      "username": "harika",
+      "email": "hsduhsau@gmail.com",
+      "password": "Enazsekiz.8",
+      "phone": "",
+      "address": "",
+      "id": 7
+    },
+    {
+      "username": "kaderseeeeee",
+      "email": "kadersarikaya0123@gmail.com",
+      "password": "eeeeeeeeeeeeeee",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 8
+    },
+    {
+      "username": "kadersssssssss",
+      "email": "kadersarikaya0123@gmail.com",
+      "password": "wwwwwwwwwwwwwwwwww",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 9
+    },
+    {
+      "username": "kaderssssssss",
+      "email": "kadersarikaya0123@gmail.coms",
+      "password": "sssssssssssssssss",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 10
+    },
+    {
+      "username": "tilkis",
+      "email": "kadersarikaya0123@gmail.com",
+      "password": "Enazsekiz.8",
+      "phone": "05445291524",
+      "address": "5 camlibel 2942 street adana",
+      "id": 11
     }
   ],
   "profile": {

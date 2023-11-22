@@ -3,12 +3,9 @@ import { Container, Typography, Button, Box } from '@mui/material';
 import axios from 'axios';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-
 const BookDetail = () => {
   const params = useParams();
   const {id} = params;
-  const router = useRouter();
   const [book, setBooks] = useState(null);
   const [comments, setComments] = useState([]); 
 
