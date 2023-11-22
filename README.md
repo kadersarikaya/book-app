@@ -17,7 +17,7 @@ This allows the application to behave as if it were interacting with a genuine d
 ## Technologies Used:
 
 - Next.js (UI)
-- [JSON Server](https://github.com/typicode/json-server) to create a fake REST API. For more information about JSON Server and to explore its documentation, please visit the [JSON Server GitHub page](https://github.com/typicode/json-server) (Fake REST API)
+- JSON Server to create a fake REST API. For more information about JSON Server and to explore its documentation, please visit the [JSON Server GitHub page](https://github.com/typicode/json-server) (Fake REST API)
 - Axios
 - Formik & Yup (Form management)
 - Material UI
