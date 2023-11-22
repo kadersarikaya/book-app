@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Book CRUD App with Fake REST API
 
-First, run the development server:
+This project encompasses a simple Book Management Application where users can view, add, edit, and delete books.
+Additionally, the application integrates with a fake REST API using JSON Server, simulating an API that operates on a local file instead of a real database.
+This allows the application to behave as if it were interacting with a genuine database.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- View books
+- Add new books
+- Edit existing books
+- Delete books
+- Login Register page
+- Form validation 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next.js (UI)
+- [JSON Server](https://github.com/typicode/json-server) to create a fake REST API. For more information about JSON Server and to explore its documentation, please visit the [JSON Server GitHub page](https://github.com/typicode/json-server) (Fake REST API)
+- Axios
+- Formik & Yup (Form management)
+- Material UI
+- Installation and Getting Started:
 
-## Learn More
+- Clone the project repository to your computer.
+- Navigate to the project directory and install the necessary dependencies.
+- Start JSON Server to create a fake REST API.  ```npm run start``` Redirect to localhost:4000
+- Launch the application and view it in your web browser. ```npm run dev``` localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## Screenshots:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Home Page
+![home](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/2bb08a1d-1621-4794-84c6-c5cc2c292be0)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Book Detail
+![detail](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/f3a32f50-6860-4126-8b67-7845de38f582)
 
-## Deploy on Vercel
+Add Book Form
+![add](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/a2ad33fa-7bf6-4311-a613-2cbb2afb69df)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit Book Form
+![edit](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/b34bdce4-109e-49b7-a87f-7d577caa6b91)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Delete Book
+![Create Next App - Brave 22 11 2023 14_23_34](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/56b09ae5-76b0-44b5-b184-7779ad535fd7)
+
+Register & Login
+![login](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/45336950-0a62-4262-9e8e-fdb0605ec75e)
+![register](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/a3ccd0fe-121f-4ece-83e5-1110caf758b7)
+
+Form Validation
+![formr](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/131efba6-ef1f-4465-bd04-1c0a27e73f10)
+
+Search with API Endpoint
+![search](https://github.com/kadersarikaya/book-fake-api-json-server/assets/74090818/b75dcd3a-19e5-4c7f-a612-650941c90e07)
+
+## Notes:
+
+This project is for educational purposes only and utilizes JSON Server instead of a real database.
+Node.js must be installed for the project to run.
+You can access the source code of the project here.
